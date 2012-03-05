@@ -125,8 +125,6 @@ install_python () {
 
 all_start_message () {
     echo "
-Installing Python.
-
 Using:
     Python full version:    $python_version
     Python version:         $py_ver
@@ -145,7 +143,8 @@ all_end_message () {
     echo "
 Python ${py_ver}.${py_maj} installed at: $python_bin
 
-Done."
+Done.
+"
 }
 
 ##########
