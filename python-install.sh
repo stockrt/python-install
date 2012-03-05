@@ -65,8 +65,10 @@ install_python () {
     echo
     echo "Installing Python ..."
 
+    python_bin="$(which python${py_ver}.${py_maj} 2>/dev/null)"
+
     # not src
-    if [[ "$use_source" == "false" ]]
+    if [[ "$python_bin" == "" && "$use_source" == "false" ]]
     then
         # emerge
         os_install "python"
@@ -84,9 +86,9 @@ install_python () {
         # ports
         os_install "python${py_ver}${py_maj}"
         os_install "py${py_ver}${py_maj}-sqlite3"
-    fi
 
-    python_bin="$(which python${py_ver}.${py_maj} 2>/dev/null)"
+        python_bin="$(which python${py_ver}.${py_maj} 2>/dev/null)"
+    fi
 
     # src
     if [[ "$python_bin" == "" || "$use_source" == "true" ]]
