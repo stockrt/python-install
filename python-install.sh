@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (C) 2011 Rogério Carvalho Schneider <stockrt@gmail.com>
+# Copyright (C) 2012 Rogério Carvalho Schneider <stockrt@gmail.com>
 #
 # This file is part of python-install.
 #
