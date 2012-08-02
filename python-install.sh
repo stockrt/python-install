@@ -55,10 +55,10 @@ die () {
 os_install () {
     package="$1"
     echo "Installing with OS native package tool: $package"
-    (which port >/dev/null 2>&1 && sudo port install $package) || \
-    (which yum >/dev/null 2>&1 && sudo yum -y install $package) || \
-    (which apt-get >/dev/null 2>&1 && sudo apt-get -y install $package)
-    (which emerge >/dev/null 2>&1 && sudo emerge $package)
+    (type port >/dev/null 2>&1 && sudo port install $package) || \
+    (type yum >/dev/null 2>&1 && sudo yum -y install $package) || \
+    (type apt-get >/dev/null 2>&1 && sudo apt-get -y install $package)
+    (type emerge >/dev/null 2>&1 && sudo emerge $package)
 }
 
 install_python () {
