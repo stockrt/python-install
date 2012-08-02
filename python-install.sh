@@ -133,10 +133,12 @@ Using:
     Downloads:              $download_dir
 
 You may override some of this by setting env vars:
-    export PYTHON_VERSION=\"x.y.z\"
+    export PYTHON_VERSION=\"$python_version\"
     $basedir/python-install.sh
-    or at once:
-    PYTHON_VERSION=\"x.y.z\" $basedir/python-install.sh"
+or at once:
+    PYTHON_VERSION=\"$python_version\" $basedir/python-install.sh
+use -s to install from source:
+    PYTHON_VERSION=\"$python_version\" $basedir/python-install.sh -s"
 }
 
 all_end_message () {
