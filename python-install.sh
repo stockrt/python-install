@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eu
+
 # Copyright (C) 2012 Rogério Carvalho Schneider <stockrt@gmail.com>
 #
 # This file is part of python-install.
@@ -30,7 +32,7 @@ py_ver="${python_version:0:1}"
 py_maj="${python_version:2:1}"
 py_min="${python_version:4:2}"
 python_src_version="${py_ver}.${py_maj}.${py_min}"
-python_src_download_url="http://www.python.org/ftp/python/$python_src_version/Python-$python_src_version.tar.bz2"
+python_src_download_url="https://www.python.org/ftp/python/$python_src_version/Python-$python_src_version.tgz"
 python_src_prefix="/usr/python${py_ver}${py_maj}"
 download_dir="/tmp/python-install"
 wget="wget -q -c"
@@ -103,7 +105,7 @@ install_python () {
 
             echo
             echo "Extracting Python ..."
-            tar xjmf Python-$python_src_version.tar.bz2 || die
+            tar xzf Python-$python_src_version.tgz || die
             cd Python-$python_src_version || die
 
             echo
