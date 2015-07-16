@@ -28,7 +28,7 @@
 python_version="${PYTHON_VERSION:-2.7.10}"
 py_ver="${python_version:0:1}"
 py_maj="${python_version:2:1}"
-py_min="${python_version:4:1}"
+py_min="${python_version:4:2}"
 python_src_version="${py_ver}.${py_maj}.${py_min}"
 python_src_download_url="http://www.python.org/ftp/python/$python_src_version/Python-$python_src_version.tar.bz2"
 python_src_prefix="/usr/python${py_ver}${py_maj}"
