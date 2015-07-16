@@ -25,7 +25,7 @@
 
 #python_version="${PYTHON_VERSION:-2.5.6}"
 #python_version="${PYTHON_VERSION:-2.6.8}"
-python_version="${PYTHON_VERSION:-2.7.3}"
+python_version="${PYTHON_VERSION:-2.7.10}"
 py_ver="${python_version:0:1}"
 py_maj="${python_version:2:1}"
 py_min="${python_version:4:1}"
